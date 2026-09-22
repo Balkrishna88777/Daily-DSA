@@ -32,10 +32,10 @@ class Solution {
             if(temp2 != null) temp2 = temp2.next;
         }
 
-        // if(carry){
-        //     ListNode imp = new ListNode(carry);
-        //     curr.next = imp;
-        // }
+        if(carry != 0){
+            ListNode imp = new ListNode(carry);
+            curr.next = imp;
+        }
 
         return dummy.next;
     }
