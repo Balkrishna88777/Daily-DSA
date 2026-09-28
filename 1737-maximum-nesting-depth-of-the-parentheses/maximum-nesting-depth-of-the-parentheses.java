@@ -11,7 +11,6 @@ class Solution {
 
             if(s.charAt(i) == ')'){
                 counter--;
-                maxCounter = Math.max(maxCounter, counter);
             }
         }
         return maxCounter;
