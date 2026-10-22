@@ -1,17 +1,13 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        int n = nums.length;
+        Arrays.sort(nums);
 
-        for (int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
-        }
-
-        for (int num : nums) {
-            if (map.get(num) == 1) {
-                return num;
+        for(int i=1; i<n; i= i+3){
+            if(nums[i] != nums[i-1]){
+                return nums[i-1];
             }
         }
-
-        return -1;
+        return nums[n-1];
     }
 }
