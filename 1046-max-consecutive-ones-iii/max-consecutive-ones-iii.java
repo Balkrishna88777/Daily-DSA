@@ -5,7 +5,7 @@ class Solution {
         while(r < nums.length){
             if(nums[r] == 0) sero++;
 
-            while(sero > k){
+            if(sero > k){
                 if(nums[l] == 0) sero--;
                 l++;
             }
